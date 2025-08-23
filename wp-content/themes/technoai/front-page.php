@@ -1,9 +1,6 @@
 <?php get_header(); ?>
 
 
-<!--  Hero Section  -->
-<?php get_template_part('partials/flexible_blocks/hero'); ?>
-<!-- End Hero Section -->
 
 <!-- start main -->
 <main id="main">
