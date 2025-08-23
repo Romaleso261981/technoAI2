@@ -61,9 +61,6 @@ function technoai_scripts()
         wp_enqueue_script('technoai-main', get_template_directory_uri() . '/assets/javascripts/main.js', array('jquery'), '', true);
     }
 
-    // Menu JavaScript
-    wp_enqueue_script('technoai-menu', get_template_directory_uri() . '/assets/javascripts/menu.js', array(), '', true);
-
     // Preconnect for Google Fonts
     add_action('wp_head', function() {
         echo '<link rel="preconnect" href="https://fonts.googleapis.com" />';
@@ -83,4 +80,5 @@ function technoai_favicon() {
     echo '<link rel="icon" type="image/png" href="' . $favicon . '" />';
     echo '<link rel="apple-touch-icon" href="' . $apple_touch . '" />';
 }
+
 add_action('wp_head', 'technoai_favicon');
