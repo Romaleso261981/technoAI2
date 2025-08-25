@@ -7,8 +7,8 @@ $buttontextquoted = get_sub_field('buttontextquoted');
 ?>
 
 <section id="hero" class="hero sticked-header-offset">
-  <!-- <div id="particles-js"></div>
-  <div id="repulse-circle-div"></div> -->
+  <div id="particles-js"></div>
+  <div id="repulse-circle-div"></div>
 
   <!-- Floating animated elements -->
   <div class="floating-blob blob-1"></div>
