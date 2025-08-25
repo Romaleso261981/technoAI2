@@ -27,10 +27,10 @@
           You can easily change any design to your own. It is also highly
           customizable SEO friendly template.
         </p>
-        <!-- <div class="d-flex justify-content-start">
-            <a href="#contact" class="btn-get-started mr-20" data-aos="fade-up" data-aos-delay="800">Get Quotes</a>
-            <a href="#services" class="btn-get-started" data-aos="fade-up" data-aos-delay="1000">Get Started</a>
-          </div> -->
+        <div class="d-flex justify-content-start">
+          <a href="#contact" class="btn-get-started mr-20" data-aos="fade-up" data-aos-delay="800">Get Quotes</a>
+          <a href="#services" class="btn-get-started" data-aos="fade-up" data-aos-delay="1000">Get Started</a>
+        </div>
       </div>
     </div>
   </div>
