@@ -1,6 +1,14 @@
+<?php
+$firsttitle = get_sub_field('firsttitle');
+$secondtitle = get_sub_field('secondtitle');
+$description = get_sub_field('description');
+$buttontextstarted = get_sub_field('buttontextstarted');
+$buttontextquoted = get_sub_field('buttontextquoted');
+?>
+
 <section id="hero" class="hero sticked-header-offset">
-  <div id="particles-js"></div>
-  <div id="repulse-circle-div"></div>
+  <!-- <div id="particles-js"></div>
+  <div id="repulse-circle-div"></div> -->
 
   <!-- Floating animated elements -->
   <div class="floating-blob blob-1"></div>
@@ -20,16 +28,17 @@
     <div class="row gy-5 aos-init aos-animate">
       <div class="col-lg-8 offset-lg-0 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
         <h2 data-aos="fade-up">
-          Delivering <br /><span>Superior IT Solutions</span><span class="circle" data-aos="fade-right"
-            data-aos-delay="800">.</span>
+          <?php echo $firsttitle; ?>
+          <br /><span><?php echo $secondtitle; ?></span>
         </h2>
         <p data-aos="fade-up" data-aos-delay="400" style="max-width: 500px">
-          You can easily change any design to your own. It is also highly
-          customizable SEO friendly template.
+          <?php echo $description; ?>
         </p>
         <div class="d-flex justify-content-start">
-          <a href="#contact" class="btn-get-started mr-20" data-aos="fade-up" data-aos-delay="800">Get Quotes</a>
-          <a href="#services" class="btn-get-started" data-aos="fade-up" data-aos-delay="1000">Get Started</a>
+          <a href="#contact" class="btn-get-started mr-20" data-aos="fade-up"
+            data-aos-delay="800"><?php echo $buttontextstarted; ?></a>
+          <a href="#services" class="btn-get-started" data-aos="fade-up"
+            data-aos-delay="1000"><?php echo $buttontextstarted; ?></a>
         </div>
       </div>
     </div>
