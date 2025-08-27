@@ -1,7 +1,7 @@
 <?php
-$services = get_field('services');
-$description = get_field('description');
-$title = get_field('title');
+$title = get_sub_field('title');
+$description = get_sub_field('description');
+$services = get_sub_field('services');
 ?>
 
 
@@ -20,23 +20,33 @@ $title = get_field('title');
     <!-- Dynamic Service Grid with Asymmetry -->
     <div class="row gy-5 position-relative">
       <?php if ($services) : ?>
-      <?php foreach ($services as $service) : ?>
+      <?php foreach ($services as $index => $service) : ?>
+      <?php
+        // Визначаємо клас картки на основі індексу для створення асиметричного ефекту
+        $card_class = 'service-card';
+        if ($index % 3 == 0) {
+          $card_class .= ' card-rotated';
+        } elseif ($index % 3 == 1) {
+          $card_class .= ' card-rotated-2';
+        }
+        // Для індексу 2 (третій елемент) залишаємо тільки базовий клас service-card
+      ?>
       <div class="col-xl-4 col-md-6 service-item">
-        <div class="service-card card-rotated">
+        <div class="<?php echo $card_class; ?>">
           <div class="service-icon mb-3">
-
+            <?php echo wp_get_attachment_image($service['service_icon'], 'full'); ?>
           </div>
-          <h4 class="service-title">Application Design</h4>
+          <h4 class="service-title">
+            <?php echo $service['service_title']; ?>
+          </h4>
           <p class="service-description">
-            We craft stunning, user-friendly applications that make your
-            vision come to life.
+            <?php echo $service['service_description']; ?>
           </p>
           <a href="#" class="btn btn-get-started">Explore</a>
         </div>
       </div>
       <?php endforeach; ?>
       <?php endif; ?>
-      <!-- Service 1 -->
 
     </div>
   </div>
