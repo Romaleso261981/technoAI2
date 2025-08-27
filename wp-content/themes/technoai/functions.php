@@ -50,6 +50,9 @@ function technoai_scripts()
     // Main CSS File
     wp_enqueue_style('technoai-main-styles', get_template_directory_uri() . '/assets/stylesheets/styles.css');
 
+    // Portfolio CSS File
+    wp_enqueue_style('technoai-portfolio-styles', get_template_directory_uri() . '/assets/stylesheets/portfolio.css');
+
     // JavaScript Files
     wp_enqueue_script('technoai-bootstrap', get_template_directory_uri() . '/assets/vendor/bootstrap/js/bootstrap.bundle.min.js', array('jquery'), '', true);
     wp_enqueue_script('technoai-aos', get_template_directory_uri() . '/assets/vendor/aos/aos.js', array(), '', true);
@@ -82,3 +85,6 @@ function technoai_favicon() {
 }
 
 add_action('wp_head', 'technoai_favicon');
+
+// Підключення кастомних типів записів та таксономій
+require get_template_directory() . '/inc/custom-post-types.php';
