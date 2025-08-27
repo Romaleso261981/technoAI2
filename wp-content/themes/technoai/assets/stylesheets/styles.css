@@ -101,7 +101,7 @@ body.dark {
   --color-primary: #424242;
   --color-secondary: #424242;
   --color-start: #000000;
-  --color-end: #000000; 
+  --color-end: #000000;
   --hero-card-bg: rgb(0 0 0 / 83%);
   --box-shadow-color: rgb(94 94 94 / 69%);
 }
@@ -1305,7 +1305,6 @@ section {background: var(--light-color);}
 }
 
 .testimonials .testimonial-item .testimonial-img {
-  width: 90px;
   border-radius: 50%;
 }
 
@@ -2497,7 +2496,7 @@ section {background: var(--light-color);}
 
 .blog .posts-list .title {
   font-size: 22px;
-  
+
   padding: 0;
   margin: 0 0 20px 0;
 }
@@ -2545,7 +2544,7 @@ section {background: var(--light-color);}
 
 .blog .blog-details .title {
   font-size: 28px;
-  
+
   padding: 0;
   margin: 20px 0 0 0;
   color: var(--color-default);
@@ -2771,7 +2770,7 @@ dl, ol, ul {
 
 .blog .sidebar .sidebar-title {
   font-size: 20px;
-  
+
   padding: 0;
   margin: 0;
   color: var(--color-default);
@@ -3728,7 +3727,7 @@ dl, ol, ul {
   .pricing .row {
     flex-direction: column;
   }
-  
+
   .pricing-card {
     margin-bottom: 30px;
   }

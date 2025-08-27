@@ -17,7 +17,7 @@ $testimonials = get_sub_field('testimonials');
           <div class="testimonial-wrap">
             <div class="testimonial-item modern">
               <div class="info-box">
-                <?php echo wp_get_attachment_image($testimonial['testimonial_image'], 'full'); ?>
+                <?php echo wp_get_attachment_image($testimonial['testimonial_image'], 'full', false, array('class' => 'testimonial-img')); ?>
                 <div>
                   <h3><?php echo $testimonial['name']; ?></h3>
                   <h4><?php echo $testimonial['position']; ?></h4>
