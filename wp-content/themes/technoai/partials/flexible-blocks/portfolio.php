@@ -90,7 +90,7 @@ $all_categories = get_terms(array(
             <?php echo get_the_post_thumbnail($work->ID, 'medium', array('class' => 'img-fluid')); ?>
             <?php else : ?>
             <div class="placeholder-image bg-light d-flex align-items-center justify-content-center"
-              style="height: 200px;">
+              style="height: 214px;">
               <img style="width: 100%; height: 100%; object-fit: cover;"
                 src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder/portfolio-placeholder.png"
                 alt="Portfolio Placeholder">
@@ -123,15 +123,6 @@ $all_categories = get_terms(array(
             <?php endif; ?>
             <?php if ($completion_date) : ?>
             <small class="text-muted d-block">Завершено: <?php echo date('M Y', strtotime($completion_date)); ?></small>
-            <?php endif; ?>
-          </div>
-
-
-          <div class="portfolio-actions">
-            <a href="<?php echo get_permalink($work->ID); ?>" class="btn btn-primary btn-sm">Деталі</a>
-            <?php if ($project_url) : ?>
-            <a href="<?php echo esc_url($project_url); ?>" class="btn btn-outline-primary btn-sm" target="_blank"
-              rel="noopener">Переглянути</a>
             <?php endif; ?>
           </div>
         </div>
