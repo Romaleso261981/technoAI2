@@ -1,7 +1,17 @@
-<div id="contact" class="contact-section section">
+<?php
+$title = get_sub_field('contact_title');
+$description = get_sub_field('contact_description');
+$address = get_sub_field('contact_addres');
+$phones = get_sub_field('contact_phones');
+$emails = get_sub_field('contact_emails');
+$button_text = get_sub_field('contact_button_text');
+$success_message = get_sub_field('contact_success_message');
+?>
+
+<section id="contact" class="contact-section section">
   <div class="section-header">
-    <h2>Contact Us</h2>
-    <p>Lorem ipsum dolor sit amet</p>
+    <h2><?php echo $title; ?></h2>
+    <p><?php echo $description; ?></p>
   </div>
   <div class="container">
     <div class="row">
@@ -12,26 +22,31 @@
               <div class="single-contact-info-box">
                 <div class="contact-info">
                   <h6>Address:</h6>
-                  <p>11 West Town</p>
-                  <p>PBo 12345, United States</p>
+                  <p><?php echo $address; ?></p>
                 </div>
               </div>
             </div>
             <div class="col-lg-12">
               <div class="single-contact-info-box">
                 <div class="contact-info">
+                  <?php if ($phones) : ?>
                   <h6>Phone:</h6>
-                  <p>+1 1234 56 789</p>
-                  <p>+1 1234 56 780</p>
+                  <?php foreach ($phones as $phone) : ?>
+                  <p><?php echo $phone['phone_number']; ?></p>
+                  <?php endforeach; ?>
+                  <?php endif; ?>
                 </div>
               </div>
             </div>
             <div class="col-lg-12">
               <div class="single-contact-info-box">
                 <div class="contact-info">
-                  <h6>Email:</h6>
-                  <p>info@example.com</p>
-                  <p>email@example.com</p>
+                  <?php if ($emails) : ?>
+                  <h6>Emails:</h6>
+                  <?php foreach ($emails as $email) : ?>
+                  <p><?php echo $email['email_address']; ?></p>
+                  <?php endforeach; ?>
+                  <?php endif; ?>
                 </div>
               </div>
             </div>
@@ -74,7 +89,7 @@
                   </div>
                   <div class="col-md-12">
                     <button type="submit" data-text="Send Message" class="cta-btn">
-                      Send Message
+                      <?php echo $button_text; ?>
                     </button>
                   </div>
                   <div class="messages">
@@ -82,7 +97,7 @@
                       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
                         &times;
                       </button>
-                      Thank You! your message has been sent.
+                      <?php echo $success_message; ?>
                     </div>
                   </div>
                 </div>
@@ -93,4 +108,4 @@
       </div>
     </div>
   </div>
-</div>
+</section>
