@@ -54,17 +54,22 @@ function technoai_scripts()
     wp_enqueue_style('technoai-portfolio-styles', get_template_directory_uri() . '/assets/stylesheets/portfolio.css');
 
     // JavaScript Files
-    wp_enqueue_script('technoai-bootstrap', get_template_directory_uri() . '/assets/vendor/bootstrap/js/bootstrap.bundle.min.js', array('jquery'), '', true);
-    wp_enqueue_script('technoai-aos', get_template_directory_uri() . '/assets/vendor/aos/aos.js', array(), '', true);
-    wp_enqueue_script('technoai-swiper', get_template_directory_uri() . '/assets/vendor/swiper/swiper-bundle.min.js', array(), '', true);
+    wp_enqueue_script('technoai-jquery', get_template_directory_uri() . '/assets/javascripts/jquery.min.js', array(), '3.7.1', true);
+    wp_enqueue_script('technoai-bootstrap', get_template_directory_uri() . '/assets/vendor/bootstrap/js/bootstrap.bundle.min.js', array('technoai-jquery'), '5.3.0', true);
+    wp_enqueue_script('technoai-aos', get_template_directory_uri() . '/assets/vendor/aos/aos.js', array(), '2.3.4', true);
+    wp_enqueue_script('technoai-swiper', get_template_directory_uri() . '/assets/vendor/swiper/swiper-bundle.min.js', array(), '10.0.0', true);
+    wp_enqueue_script('technoai-glightbox', get_template_directory_uri() . '/assets/vendor/glightbox/js/glightbox.min.js', array(), '3.2.0', true);
+    wp_enqueue_script('technoai-plugins', get_template_directory_uri() . '/assets/javascripts/plugins.js', array('technoai-jquery'), '1.0.0', true);
+    wp_enqueue_script('technoai-purecounter', get_template_directory_uri() . '/assets/javascripts/purecounter_vanilla.js', array(), '1.2.0', true);
+    wp_enqueue_script('technoai-particles', get_template_directory_uri() . '/assets/javascripts/particles.min.js', array(), '2.0.0', true);
+    wp_enqueue_script('technoai-script', get_template_directory_uri() . '/assets/javascripts/script.js', array('technoai-jquery'), '1.0.0', true);
 
     // Portfolio JavaScript File
-    wp_enqueue_script('technoai-portfolio', get_template_directory_uri() . '/assets/javascripts/portfolio.js', array('jquery'), '1.0.0', true);
-    wp_enqueue_script('technoai-glightbox', get_template_directory_uri() . '/assets/vendor/glightbox/js/glightbox.min.js', array(), '', true);
+    wp_enqueue_script('technoai-portfolio', get_template_directory_uri() . '/assets/javascripts/portfolio.js', array('technoai-jquery'), '1.0.0', true);
 
     // Main JavaScript File (якщо є)
     if (file_exists(get_template_directory() . '/assets/javascripts/main.js')) {
-        wp_enqueue_script('technoai-main', get_template_directory_uri() . '/assets/javascripts/main.js', array('jquery'), '', true);
+        wp_enqueue_script('technoai-main', get_template_directory_uri() . '/assets/javascripts/main.js', array('technoai-jquery'), '1.0.0', true);
     }
 
     // Preconnect for Google Fonts

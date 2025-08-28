@@ -132,8 +132,8 @@
         <!-- Section Header -->
         <div class="section-header text-center">
           <h2>Services We Offer</h2>
-          <p class="lead text-muted">
-            Explore our creative solutions that make a real difference.
+          <p class="lead text-muted"></p>
+          Explore our creative solutions that make a real difference.
           </p>
         </div>
 

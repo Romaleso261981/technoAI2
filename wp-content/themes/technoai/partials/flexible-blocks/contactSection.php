@@ -56,7 +56,7 @@ $success_message = get_sub_field('contact_success_message');
       <div class="col-lg-8 col-md-12" data-aos="fade-left">
         <div class="contact-form-box contact-form contact-form-3">
           <div class="form-container-box">
-            <form class="contact-form form" id="ajax-contact" method="post" action="assets/phpscripts/contact.php">
+            <form class="contact-form form" method="post">
               <div class="controls">
                 <div class="row">
                   <div class="col-md-6">

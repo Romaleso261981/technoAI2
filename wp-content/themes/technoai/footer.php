@@ -119,21 +119,8 @@
 
 <div id="preloader"></div>
 
-<!-- Vendor JS Files -->
-<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/jquery.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/assets/vendor/aos/aos.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/plugins.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/purecounter_vanilla.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/validator.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/contactform.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/particles.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/script.js"></script>
-
-<!-- Template Main JS File -->
-<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/main.js"></script>
+<!-- JavaScript файли підключені через functions.php -->
+<?php wp_footer(); ?>
 </body>
 
 </html>
