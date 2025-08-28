@@ -57,6 +57,9 @@ function technoai_scripts()
     wp_enqueue_script('technoai-bootstrap', get_template_directory_uri() . '/assets/vendor/bootstrap/js/bootstrap.bundle.min.js', array('jquery'), '', true);
     wp_enqueue_script('technoai-aos', get_template_directory_uri() . '/assets/vendor/aos/aos.js', array(), '', true);
     wp_enqueue_script('technoai-swiper', get_template_directory_uri() . '/assets/vendor/swiper/swiper-bundle.min.js', array(), '', true);
+
+    // Portfolio JavaScript File
+    wp_enqueue_script('technoai-portfolio', get_template_directory_uri() . '/assets/javascripts/portfolio.js', array('jquery'), '1.0.0', true);
     wp_enqueue_script('technoai-glightbox', get_template_directory_uri() . '/assets/vendor/glightbox/js/glightbox.min.js', array(), '', true);
 
     // Main JavaScript File (якщо є)
@@ -88,3 +91,6 @@ add_action('wp_head', 'technoai_favicon');
 
 // Підключення кастомних типів записів та таксономій
 require get_template_directory() . '/inc/custom-post-types.php';
+
+// Підключення portfolio AJAX функціональності
+require get_template_directory() . '/inc/portfolio-ajax.php';
