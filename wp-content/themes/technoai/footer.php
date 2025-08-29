@@ -1,9 +1,9 @@
-<!--  Footer  -->
+<!--  Футер  -->
 <footer id="footer" class="footer-section">
   <div class="container">
     <div class="footer-content pt-5 pb-5">
       <div class="row">
-        <!-- Footer Logo and Social Icons -->
+        <!-- Логотип футера та соціальні іконки -->
         <div class="col-xl-4 col-lg-4 mb-50">
           <div class="footer-widget">
             <div class="footer-logo">
@@ -13,12 +13,12 @@
             </div>
             <div class="footer-text">
               <p>
-                We provide innovative solutions tailored to your needs. Join
-                us in transforming your digital landscape.
+                Ми надаємо інноваційні рішення, що відповідають вашим потребам. Приєднуйтесь до нас у перетворенні
+                вашого цифрового ландшафту.
               </p>
             </div>
             <div class="footer-social-icon">
-              <span>Follow Us</span>
+              <span>Ми в соціальних мережах</span>
               <a href="#" class="social-icon twitter"><i class="bi bi-twitter-x"></i></a>
               <a href="#" class="social-icon facebook"><i class="bi bi-facebook"></i></a>
               <a href="#" class="social-icon instagram"><i class="bi bi-instagram"></i></a>
@@ -27,68 +27,73 @@
           </div>
         </div>
 
-        <!-- Services List -->
+        <!-- Список послуг -->
         <div class="col-lg-2 col-md-6 footer-column">
           <div class="service-widget footer-widget">
             <div class="footer-widget-heading">
-              <h3>Our Services</h3>
+              <h3>Наші послуги</h3>
             </div>
             <ul class="list">
-              <li><a href="services.html">Web Design</a></li>
-              <li><a href="services.html">App Development</a></li>
-              <li><a href="services.html">Cloud Solutions</a></li>
-              <li><a href="services.html">SEO Services</a></li>
+              <li><a href="services.html">Веб-дизайн</a></li>
+              <li><a href="services.html">Розробка додатків</a></li>
+              <li><a href="services.html">Хмарні рішення</a></li>
+              <li><a href="services.html">SEO послуги</a></li>
             </ul>
           </div>
         </div>
 
-        <!-- Information Links -->
+        <!-- Інформаційні посилання -->
         <div class="col-lg-2 col-md-6 footer-column">
           <div class="service-widget footer-widget">
             <div class="footer-widget-heading">
-              <h3>Information</h3>
+              <h3>Інформація</h3>
             </div>
             <ul class="list">
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="about.html">Про нас</a></li>
+              <li><a href="portfolio.html">Портфоліо</a></li>
+              <li><a href="contact.html">Контакти</a></li>
+              <li><a href="privacy-policy.html">Політика конфіденційності</a></li>
             </ul>
           </div>
         </div>
 
-        <!-- Contact Info and Newsletter -->
+        <!-- Контактна інформація та розсилка -->
         <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
           <div class="contact-widget footer-widget">
             <div class="footer-widget-heading">
-              <h3>Get In Touch</h3>
+              <h3>Зв'яжіться з нами</h3>
             </div>
             <div class="footer-text">
               <p>
-                <i class="bi bi-geo-alt-fill mr-15"></i> 1234 Business St.,
-                City, Country
+                <i class="bi bi-geo-alt-fill mr-15"></i> Київ, Банкова 23 Україна
               </p>
               <p>
-                <i class="bi bi-telephone-inbound-fill mr-15"></i> +123 456
-                7890
+                <i class="bi bi-telephone-inbound-fill mr-15"></i> +380 96 422 03 25
+              </p>
+              <p>
+                <i class="bi bi-telephone-inbound-fill mr-15"></i> +380 66 255 06 35
               </p>
               <p>
                 <i class="bi bi-envelope-fill mr-15"></i>
-                support@example.com
+                info@technoai.io
+              </p>
+              <p>
+                <i class="bi bi-envelope-fill mr-15"></i>
+                support@technoai.io
               </p>
             </div>
           </div>
 
           <div class="footer-widget">
             <div class="footer-widget-heading">
-              <h3>Newsletter</h3>
+              <h3>Розсилка</h3>
             </div>
             <div class="footer-text mb-25">
-              <p>Subscribe to our newsletter for the latest updates!</p>
+              <p>Підпишіться на нашу розсилку для отримання останніх оновлень!</p>
             </div>
             <div class="subscribe-form">
               <form action="#">
-                <input type="text" placeholder="Email Address" required />
+                <input type="text" placeholder="Email адреса" required />
                 <button><i class="bi bi-send"></i></button>
               </form>
             </div>
@@ -96,22 +101,20 @@
         </div>
       </div>
 
-      <!-- Footer Copyright -->
+      <!-- Авторські права футера -->
       <div class="row">
         <div class="col-xl-6 col-lg-6 text-left">
           <div class="copyright-text">
-            <p>
-              &copy; 2025 Your Company. Designed with passion by
-              <a href="https://www.templatemonster.com">Zr Themes</a>
-            </p>
+            <div class="footer__copy"> &copy; <?php echo date('Y'); ?> <?php echo bloginfo('name'); ?> Всі права
+              захищені.
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 </footer>
 
-<!-- End Footer -->
+<!-- Кінець Footer -->
 
 <a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
   <i class="bi bi-arrow-up-short"></i>

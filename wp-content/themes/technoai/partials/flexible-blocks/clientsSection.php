@@ -1,39 +1,16 @@
+<?php
+$clients = get_sub_field('clients');
+?>
+
 <section id="clients" class="clients section">
   <div class="container" data-aos="zoom-out">
     <div class="clients-slider swiper">
       <div class="swiper-wrapper align-items-center">
+        <?php foreach ($clients as $client) : ?>
         <div class="swiper-slide">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client-1.png" class="img-fluid"
-            alt="" />
+          <?php echo wp_get_attachment_image($client['image'], 'full', false, array('class' => 'img-fluid')); ?>
         </div>
-        <div class="swiper-slide">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client-2.png" class="img-fluid"
-            alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client-3.png" class="img-fluid"
-            alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client-4.png" class="img-fluid"
-            alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client-5.png" class="img-fluid"
-            alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client-6.png" class="img-fluid"
-            alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client-7.png" class="img-fluid"
-            alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/clients/client-8.png" class="img-fluid"
-            alt="" />
-        </div>
+        <?php endforeach; ?>
       </div>
     </div>
   </div>
