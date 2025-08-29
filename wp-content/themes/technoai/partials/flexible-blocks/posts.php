@@ -1,12 +1,8 @@
 <?php
 $title = get_sub_field('title');
 $description = get_sub_field('description');
-$blogposts = get_sub_field('blogposts');
+$blogposts = get_sub_field('posts');
 ?>
-
-<br>
-<?php print_r($blogposts); ?>
-<br>
 
 <section id="recent-posts" class="recent-posts sections-bg">
   <div class="container" data-aos="fade-up">
@@ -16,25 +12,29 @@ $blogposts = get_sub_field('blogposts');
     </div>
     <?php if ($blogposts) : ?>
     <div class="row gy-4">
+      <?php foreach ($blogposts as $blogpost) : ?>
       <div class="col-lg-4 col-md-6">
-        <?php foreach ($blogposts as $index => $service_id) : ?>
         <article class="post-card">
           <div class="post-img">
-            <?php echo get_the_post_thumbnail($service_id, 'full', array('class' => 'services__picture')); ?>
+            <?php echo wp_get_attachment_image($blogpost['image'], 'full', false, array('class' => 'services__picture')); ?>
           </div>
-          <p class="post-category">Marketing</p>
+          <p class="post-category">
+            <?php echo $blogpost['post-category']; ?>
+          </p>
           <h3 class="post-title">
-            <a href="blog-details.html">Digital Marketing and its Importantance?</a>
+            <a href="#"><?php echo $blogpost['post-title']; ?></a>
           </h3>
           <div class="post-meta">
-            <p class="post-author">Main Dow</p>
+            <p class="post-author">
+              <?php echo $blogpost['post-author']; ?>
+            </p>
             <p class="post-date">
-              <time datetime="2025-01-01">Dec 22, 2025</time>
+              <time datetime="<?php echo $blogpost['post-date']; ?>"><?php echo $blogpost['post-date']; ?></time>
             </p>
           </div>
         </article>
-        <?php endforeach; ?>
       </div>
+      <?php endforeach; ?>
     </div>
     <?php endif; ?>
     <!-- End recent posts row -->
