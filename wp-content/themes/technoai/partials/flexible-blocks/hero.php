@@ -37,7 +37,7 @@ $buttontextquoted = get_sub_field('buttontextquoted');
         <div class="d-flex justify-content-start">
           <a href="#contact" class="btn-get-started mr-20" data-aos="fade-up"
             data-aos-delay="800"><?php echo $buttontextstarted; ?></a>
-          <a href="#services" class="btn-get-started" data-aos="fade-up"
+          <a href="#contact" class="btn-get-started" data-aos="fade-up"
             data-aos-delay="1000"><?php echo $buttontextstarted; ?></a>
         </div>
       </div>

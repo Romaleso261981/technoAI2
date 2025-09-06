@@ -19,7 +19,9 @@ $counters = get_sub_field('counters');
               <?php echo $counter['count']; ?>
             </h3>
             <p class="stats-label">
-              <?php echo $counter['llabe']; ?>
+              <?php if ($counter['label']) : ?>
+              <?php echo $counter['label']; ?>
+              <?php endif; ?>
             </p>
             <small><?php echo $counter['description']; ?></small>
           </div>

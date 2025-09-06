@@ -1,6 +1,6 @@
 <?php
-$title = get_sub_field('pricing_title') ?: 'Тарифні плани';
-$description = get_sub_field('pricing_description') ?: 'Виберіть план, який підходить вашим потребам';
+$title = get_sub_field('pricing_title');
+$description = get_sub_field('pricing_description');
 $pricingCards = get_sub_field('pricing_cards');
 
 // Перевіряємо, чи є дані
@@ -28,9 +28,9 @@ if (!$pricingCards || empty($pricingCards)) {
               <h3><?php echo esc_html($card['pricing_card_title'] ?? 'Basic'); ?></h3>
               <div class="price">
                 <h4>
+                  <p>Вартість від</p>
                   <sup><?php echo esc_html($card['pricing_union'] ?? '$'); ?></sup><?php echo esc_html($card['price'] ?? '25'); ?>
                 </h4>
-                <p>/month</p>
               </div>
             </div>
             <ul class="features">
@@ -45,7 +45,7 @@ if (!$pricingCards || empty($pricingCards)) {
               <?php endforeach; ?>
               <?php endif; ?>
             </ul>
-            <a href="#" class="btn-get-started">Замовити</a>
+            <a href="#contact" class="btn-get-started">Замовити</a>
           </div>
         </div>
         <?php endforeach; ?>

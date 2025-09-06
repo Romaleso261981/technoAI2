@@ -1,7 +1,7 @@
 <?php
-$title = get_sub_field('cta_title') ?: 'Мої роботи';
-$description = get_sub_field('cta_description') ?: 'Ознайомтеся з моїми останніми проектами та досягненнями';
-$button_text = get_sub_field('cta_button_text') ?: 'Замовити';
+$title = get_sub_field('cta_title');
+$description = get_sub_field('cta_description');
+$button_text = get_sub_field('cta_button_text');
 ?>
 
 
@@ -14,7 +14,7 @@ $button_text = get_sub_field('cta_button_text') ?: 'Замовити';
         <p>
           <?php echo $description; ?>
         </p>
-        <a class="cta-btn" href="mailto:info@example.com"><?php echo $button_text; ?></a>
+        <a class="cta-btn" href="#contact"><?php echo $button_text; ?></a>
       </div>
     </div>
   </div>

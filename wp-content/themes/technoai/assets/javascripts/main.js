@@ -67,6 +67,45 @@ document.addEventListener("DOMContentLoaded", () => {
       })
     );
   }
+ /**
+   * services
+   */
+
+	document.addEventListener('DOMContentLoaded', function() {
+  const filterButtons = document.querySelectorAll('.btn-filter');
+  const serviceItems = document.querySelectorAll('.service-item');
+  const noResults = document.querySelector('.no-results');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const filter = this.getAttribute('data-filter');
+
+      // Оновлюємо активну кнопку
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
+
+      // Фільтруємо сервіси
+      let visibleCount = 0;
+      serviceItems.forEach(item => {
+        const category = item.getAttribute('data-category');
+
+        if (filter === 'all' || category === filter) {
+          item.style.display = 'block';
+          visibleCount++;
+        } else {
+          item.style.display = 'none';
+        }
+      });
+
+      // Показуємо/ховаємо повідомлення про відсутність результатів
+      if (visibleCount === 0) {
+        noResults.style.display = 'block';
+      } else {
+        noResults.style.display = 'none';
+      }
+    });
+  });
+});
   /**
    * Navbar links active state on scroll
    */

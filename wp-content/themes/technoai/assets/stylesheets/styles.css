@@ -564,6 +564,10 @@ section {
     position: relative;
   }
 
+  .navbar-blog a {
+    color: var(--text-color);
+  }
+
   .stikcy-menu .navbar a {
     color: var(--text-color);
   }
@@ -1318,7 +1322,7 @@ section {
   box-shadow: -1px 5px 20px 0px var(--box-shadow-color);
 }
 .testimonials .testimonial-item .info-box {
-  min-width: 276px;
+  min-width: 100px;
 }
 
 .testimonials .testimonial-item .testimonial-img {
@@ -3741,7 +3745,7 @@ ul {
 
 .pricing-card .price p {
   font-size: 1.1rem;
-  color: var(--color-dark);
+  color: #777;
   margin-top: -10px;
 }
 
@@ -3782,15 +3786,6 @@ ul {
   margin-bottom: 15px;
   display: flex;
   align-items: center;
-}
-
-.pricing-card .features li > span,
-.pricing-card  > div > h3{
-  color: var(--color-dark);
-}
-
-.feature-text {
-  color: var(--color-dark);
 }
 
 .pricing-card .features li.cross-line {
@@ -4441,7 +4436,7 @@ ul {
 .contact-section .form-message {
   margin: 0;
 }
-.contact-form button[type="submit"] {
+.contact-form input[type="submit"] {
   background: linear-gradient(45deg, #029b9b, #029b9b, #035e5e);
   box-shadow: 0 6px 20px #029b9b70;
   color: #fff;
@@ -4456,16 +4451,16 @@ ul {
   overflow: hidden;
 }
 
-.contact-form button[type="submit"]:hover {
+.contact-form input[type="submit"]:hover {
   box-shadow: 0 6px 20px #029b9b70;
   color: #ffffff;
 }
 
-.contact-form button[type="submit"]:active {
+.contact-form input[type="submit"]:active {
   box-shadow: 0 6px 20px #029b9b70;
 }
 
-.contact-form button[type="submit"]::before {
+.contact-form input[type="submit"]::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -4479,7 +4474,7 @@ ul {
   z-index: 0;
 }
 
-.contact-form button[type="submit"]:hover::before {
+.contact-form input[type="submit"]:hover::before {
   transform: scale(1);
 }
 

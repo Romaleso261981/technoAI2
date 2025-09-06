@@ -13,16 +13,17 @@ $faq_content = get_sub_field('faq_content');
 
     <div class="faq-content">
       <div class="accordion" id="faqAccordion">
-        <!-- FAQ Item 1 -->
-        <?php foreach ($faq_content as $faq) : ?>
+        <!-- FAQ Items -->
+        <?php foreach ($faq_content as $index => $faq) : ?>
         <div class="accordion-item">
           <h3 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#faq<?php echo $index + 1; ?>">
               <span class="icon"><i class="bi bi-question-circle-fill"></i></span>
               <?php echo $faq['faq_question']; ?>
             </button>
           </h3>
-          <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div id="faq<?php echo $index + 1; ?>" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
             <div class="accordion-body">
               <?php echo $faq['faq_answer']; ?>
             </div>

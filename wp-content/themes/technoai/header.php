@@ -26,7 +26,7 @@
         ?>
       </nav>
       <!-- .navbar -->
-      <a href="<?php echo home_url('/contact'); ?>" class="btn-get-started hide-on-mobile">Get Quotes</a>
+      <a href="<?php echo home_url('/contact'); ?>" class="btn-get-started hide-on-mobile">Замовити консультацію</a>
       <button id="darkmode-button"><i class="bi bi-moon-fill"></i></button>
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>

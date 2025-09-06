@@ -3,6 +3,7 @@ $title = get_sub_field('our_team_title') ?: 'Our Team';
 $description = get_sub_field('our_team_description') ?: 'Meet the experts who bring our vision to life';
 $team_members = get_sub_field('our_team_members');
 ?>
+
 <section id="team" class="team section-gradient">
   <div class="container" data-aos="fade-up">
     <div class="section-header text-center">
@@ -24,12 +25,10 @@ $team_members = get_sub_field('our_team_members');
             <h4><?php echo $member['member_name']; ?></h4>
             <span><?php echo $member['member_position']; ?></span>
             <div class="social-links mt-3">
-              <?php if ($member['member_social_links']) : ?>
               <?php foreach ($member['member_social_links'] as $link) : ?>
               <a href="<?php echo $link['link']; ?>" class="social-icon"><i
                   class="bi bi-<?php echo $link['icon']; ?>"></i></a>
               <?php endforeach; ?>
-              <?php endif; ?>
             </div>
           </div>
         </div>

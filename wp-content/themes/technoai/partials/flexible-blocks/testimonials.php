@@ -1,6 +1,6 @@
 <?php
-$title = get_sub_field('testimonials_title') ?: 'What Our Clients Say';
-$description = get_sub_field('testimonials_description') ?: 'Real stories from our satisfied customers';
+$title = get_sub_field('testimonials_title');
+$description = get_sub_field('testimonials_description');
 $testimonials = get_sub_field('testimonials');
 ?>
 
@@ -12,6 +12,7 @@ $testimonials = get_sub_field('testimonials');
     </div>
     <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
       <div class="swiper-wrapper">
+        <?php if ($testimonials) : ?>
         <?php foreach ($testimonials as $testimonial) : ?>
         <div class="swiper-slide">
           <div class="testimonial-wrap">
@@ -36,6 +37,11 @@ $testimonials = get_sub_field('testimonials');
           </div>
         </div>
         <?php endforeach; ?>
+        <?php else : ?>
+        <div class="info-box text-center">
+          <p>Поки що немає відгуків від наших клієнтів. Будьте першими, хто залишить свій відгук!</p>
+        </div>
+        <?php endif; ?>
       </div>
       <div class="swiper-pagination"></div>
     </div>
