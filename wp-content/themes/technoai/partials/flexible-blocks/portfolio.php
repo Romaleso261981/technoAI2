@@ -1,8 +1,8 @@
   <?php
-  $title = get_sub_field('title') ?: 'Мої роботи';
-  $description = get_sub_field('description') ?: 'Ознайомтеся з моїми останніми проектами та досягненнями';
-  $category_filter = get_sub_field('category_filter'); // Якщо потрібно показати тільки певну категорію
-  $posts_per_page = get_sub_field('posts_per_page') ?: 6;
+  $title = get_sub_field('title');
+  $description = get_sub_field('description');
+  $category_filter = get_sub_field('category_filter');
+  $posts_per_page = get_sub_field('posts_per_page');
 
   // Отримуємо роботи портфоліо
   $portfolio_args = array(
