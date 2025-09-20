@@ -18,9 +18,15 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_KEY }}
+          key: ${{ secrets.SSH_KEY }}          # або SSH_PRIVATE_KEY — залежить від того, як назвав секрет
           port: ${{ secrets.SSH_PORT }}
           script: |
-            cd /home/vyjmk/webtechportfolio.website   # ← постав свій шлях до кореня сайту або теми
+            cd /home/yvjmk/webtechportfolio.website/www
             git fetch --all
             git reset --hard origin/main || git pull --ff-only
+
+            # якщо потрібно додати побудову або рестарт процеса:
+            # npm ci
+            # npm run build
+            # pm2 restart your-app
+
