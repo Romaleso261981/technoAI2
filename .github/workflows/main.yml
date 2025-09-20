@@ -1,0 +1,26 @@
+name: Deploy to adm.tools
+
+on:
+  push:
+    branches: [ main ]          # деплой на кожен пуш у main
+  pull_request:
+    types: [closed]             # і коли PR у main закритий
+    branches: [ main ]
+
+jobs:
+  deploy:
+    if: github.event_name != 'pull_request' || github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: SSH into server and deploy
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            cd /home/vyjmk/webtechportfolio.website   # ← постав свій шлях до кореня сайту або теми
+            git fetch --all
+            git reset --hard origin/main || git pull --ff-only
