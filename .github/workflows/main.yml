@@ -2,9 +2,9 @@ name: Deploy to adm.tools
 
 on:
   push:
-    branches: [ main ]          # деплой на кожен пуш у main
+    branches: [ main ]
   pull_request:
-    types: [closed]             # і коли PR у main закритий
+    types: [closed]
     branches: [ main ]
 
 jobs:
@@ -18,14 +18,27 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_KEY }}          # або SSH_PRIVATE_KEY — залежить від того, як назвав секрет
+          key: ${{ secrets.SSH_KEY }}    # або SSH_PRIVATE_KEY — як ти назвав секрет
           port: ${{ secrets.SSH_PORT }}
           script: |
-            cd /home/yvjmk/webtechportfolio.website/www
-            git fetch --all
-            git reset --hard origin/main || git pull --ff-only
+            set -e
 
-            # якщо потрібно додати побудову або рестарт процеса:
-            # npm ci
-            # npm run build
-            # pm2 restart your-app
+            APP_DIR="/home/yvjmk/webtechportfolio.website/www"
+            REPO_URL="https://github.com/Romaleso261981/technoAI2.git"   # <-- твій репозиторій
+
+            mkdir -p "$APP_DIR"
+
+            if [ -d "$APP_DIR/.git" ]; then
+              echo "Repo exists -> update"
+              git -C "$APP_DIR" fetch --all
+              git -C "$APP_DIR" reset --hard origin/main || git -C "$APP_DIR" pull --ff-only
+            else
+              echo "Repo not found -> clone"
+              git clone "$REPO_URL" "$APP_DIR"
+              git -C "$APP_DIR" checkout main || true
+            fi
+
+            # тут можна додати збірку/рестарт (якщо треба)
+            # npm --prefix "$APP_DIR" ci
+            # npm --prefix "$APP_DIR" run build
+            # pm2 restart your-app || true
