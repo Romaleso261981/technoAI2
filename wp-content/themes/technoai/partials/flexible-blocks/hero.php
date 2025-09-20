@@ -31,9 +31,6 @@ $buttontextquoted = get_sub_field('buttontextquoted');
           <?php echo $firsttitle; ?>
           <br /><span><?php echo $secondtitle; ?></span>
         </h2>
-        <p data-aos="fade-up" data-aos-delay="400" style="max-width: 500px">
-          <?php echo $description; ?>
-        </p>
         <div class="d-flex justify-content-start">
           <a href="#contact" class="btn-get-started mr-20" data-aos="fade-up"
             data-aos-delay="800"><?php echo $buttontextstarted; ?></a>
